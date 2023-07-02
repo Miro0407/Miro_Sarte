@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>KOBE TRIBUTE PAGE</title>
+    <script src="index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>    
+</head>
+<body>
+    <nav>
+        <figure>
+        <img src="images/kobe-logo.png" style="width: 30px; height:26px; margin: 6px 18px 18px 6px;">
+        <h1>KOBE TRIBUTE</h1>
+    </figure>
+        <ul class="navigation">
+            <ul>
+                <li><a href="#hero-section" class="navlink">Home</a></li>
+                <li><a href="#quotes" class="navlink">Quotes</a>
+                </li>
+                <li><a href="#biography" class="navlink">Biography</a>
+                </li>
+                <li><a href="#career" class="navlink">Career</a>
+                </li>
+            </ul>
+            </ul>
+        </ul>
+    </nav>
+    <main>
+        <section class="hero-section" id="hero-section">
+            <div class="kobe-year" id="kober-year">
+                <div class="hero" id="content-hero">
+                <h2>
+                    KOBE BRYANT 
+                </h2>
+                <h3>
+                    5 Times NBA Champion
+                </h3>
+                <h4>
+                    1978-2020
+                </h4>
+                <img src="images/kobe-hero.png"  style="width:32rem; height:35.5rem;">
+            </div>
+
+            </div>
+
+        </section>
+        <section class="quotes" id="quotes">
+            <div class="content quotes" id="content-quotes"><h2>QUOTES</h2></div>
+                   
+                    <div class="content slideshow" id="slideshow"> 
+                    <div class="quotes-slide" id="quotes-slide-1">
+                        <q>
+                             Life is too short to get bogged down and be 
+                              discouraged. You have to keep moving. You
+                              have to keep going. Put one foot in front
+                              of the other, smile and just keep on rolling.
+                            </q>
+                    </div>
+                    <div class="quotes-slide" id="quotes-slide-2">
+                        <q>
+                            I’m here. I’m not going anywhere. No matter what the injury — 
+                            unless it’s completely  debilitatin— I’m going to be the same 
+                            player I’ve always been. I’ll figure it out. I’ll make some 
+                            tweaks, some changes, but I’m still coming.</q>
+                    </div>
+                    <div class="quotes-slide" id="quotes-slide-3">
+                        <q>
+                            I have self-doubt. I have insecurity. I have fear of failure. 
+                            I have nights when I show up at the arena and I'm like, 'My 
+                            back hurts, my feet hurt, my knees hurt. I don't have it. I 
+                            just want to chill.' We all have self-doubt. You don't deny it, 
+                            but you also don't capitulate to it. You embrace it.</q>
+                    </div>
+                </div>
+                    <div class="quote-originator">
+                        <p>- KOBE BRYANT</p>
+                    </div>
+                    <div class="dot-container">
+                        <span class="dot" id="dot-1"></span>
+                        <span class="dot" id="dot-2"></span>
+                        <span class="dot" id="dot-3"></span>
+                    </div>
+               
+       
+        </section>
+        <section class="biography" id="biography">
+            <div class="biography-header" id="biography-header">
+                <h2>
+                    Biography
+                </h2>
+            </div>
+            <div class="biography-container" id="container">
+            <div class="content biography" id="image-container">
+                <img src="images/kobe bryan.png" id="biography-kobe-image">
+            </div>
+            <div class="content biography" id="content-biography">
+                    <p>Kobe Bryant in full name Kobe Bean Bryant, is known as a superstar 
+       basketball player because of his incredible skills and winning shots
+        created in game. He also won 5 NBA championship rings and 2 olympic gold. He is born on August 23, 1978 in Philadelphia,
+        Pennsylvania and died on January 26, 2020, in Calabasas, California.
+        His wife name is Vanessa Bryant and they have four daughters (Natalia Diamante, Gianna Maria-Onore, Bianka Bella, and Capri Kobe).</p>
+            </div>
+    
+            </div>
+            
+
+        </section>
+
+
+        <section class="career" id="career">
+            <div class="career-header" id="career-header">
+                <h2>Kobe Bryant Career</h2>
+            </div>
+            <div class="content container">
+            <div class="slider">
+               
+                <div class="slide" id="slide-1">
+                    <img src="images/nba-rings.png" alt="nba-rings">
+                    <p>5 Times NBA Champion</p>
+
+                </div>
+                <div class="slide" id="slide-2">
+                    <img src="images/gold-medal.png" alt="olympic medal">
+                    <p>8 Times Gold Medalist</p>
+
+
+                </div>
+                <div class="slide" id="slide-3">
+                    <img src="images/nba-mvp-award.png" alt="mvp award">
+                    <p>2 Times Finals MVP</p>
+
+            </div>
+        </div>
+        </section>
+
+    </main>
+    <footer><p>COPYRIGHT © 2023 BY MIRO SARTE </p></footer>
+    
+</body>
+<script>
+$(document).on("scroll", function() {
+    var pageTop = $(document).scrollTop();
+    var pageBottom = pageTop + $(window).height();
+    var tags = $(".content");
+  
+    for (var i = 0; i < tags.length; i++) {
+      var tag = tags[i];
+  
+      if ($(tag).position().top < pageBottom) {
+        $(tag).addClass("visible");
+      } else {
+        $(tag).removeClass("visible");
+      }
+    }
+  });
+</script>
+
+</html>
